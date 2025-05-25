@@ -3,10 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./javascript.js"></script>
-    <title>Document</title>
+    <script src="javascript.js" defer></script>
+    <title>RPS Odin Project</title>
 </head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #container {
+        display: flex;
+        flex-direction: column; /* Stack rows vertically */
+        justify-content: center;
+        align-items: center;     /* Center all rows horizontally */
+    }
+
+    .row {
+        display: flex;
+        justify-content: center; /* Center content in the row */
+        align-items: center;
+        gap: 16px;
+        margin: 8px 0;           /* Optional spacing between rows */
+    }
+
+    h1 {
+        margin: 0;
+        text-align: center;
+    }
+
+    button {
+        font-size: 18px;
+        font-weight: bold;
+        padding: 8px;
+    }
+
+</style>
 <body>
-    
+    <h1>Rock, Paper, Scissors!</h1>
+    <div id="container">
+        <div id="scores" class ="row">
+            <div id="player" class="row">
+                <h3>Player Score: </h3>
+                <h3 id="pScore">0</h3>
+            </div>
+            <div id="computer" class="row">
+                <h3>Computer Score: </h3>
+                <h3 id="cScore">0</h3>
+            </div>
+        </div>
+        <div id="buttonContainer" class="row">
+            <button>Rock</button>
+            <button>Paper</button>
+            <button>Scissors</button>
+        </div>
+    </div>
 </body>
 </html>
